@@ -62,7 +62,7 @@ prompt_ick_setup() {
 
   # プロンプトの設定
   setopt prompt_subst
-  PROMPT='$(prompt_command_result) $(user_with_host) $(prompt_dir)$(git_prompt_info) %# '
+  PROMPT='$(prompt_command_result) $(user_with_host) $(prompt_dir)$(git_prompt_info) %$ '
 
   # 右プロンプトの設定を削除
   RPROMPT=''
