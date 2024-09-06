@@ -31,6 +31,6 @@ NO_BACKUP=1 make install
 - ghq
 - peco
 - brew
-
+- rbenv
 
 - volta 'curl https://get.volta.sh | bash'

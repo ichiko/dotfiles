@@ -12,3 +12,7 @@ alias egrep='egrep --color=auto'
 alias df='df -h'
 alias du='du -h'
 alias cd='pushd'
+
+export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
+alias java="java -Dfile.encoding=UTF-8"
+alias javac="javac -J-Dfile.encoding=UTF-8"
