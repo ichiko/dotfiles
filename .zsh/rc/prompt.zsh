@@ -33,14 +33,13 @@ function git_prompt_info() {
   ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
   local branch=${ref#refs/heads/}
   local git_status=$(command git status --porcelain 2> /dev/null)
-  
 
   if [ "$(git rev-parse --is-inside-work-tree 2> /dev/null)" = true ]; then
-    echo " %F{${prompt_color}}${branch}*%f"
-  elif [[ -n "$git_status" ]]; then
-    echo " %F{${prompt_color}}${branch}*%f"
-  else
-    echo "%F{${prompt_color}}${branch}%f"
+    if [[ -n "$git_status"  ]]; then
+      echo " %F{${prompt_color}}${branch}*%f"
+    else
+      echo " %F{${prompt_color}}${branch}%f"
+    fi
   fi
 }
 
