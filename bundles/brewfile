@@ -1,0 +1,3 @@
+brew 'ghq'
+brew 'peco'
+brew 'rbenv'

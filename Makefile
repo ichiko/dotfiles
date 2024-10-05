@@ -3,8 +3,12 @@ BACKUP_DIR := $(HOME)/dotfile_backup2
 .PHONY: all
 all: install
 
+.PHONY: setup_brew
+setup_brew:
+	@installer/setup_brew.sh
+
 .PHONY: install
-install:
+install: setup_brew
 	@if [ -z "$(NO_BACKUP)" ]; then \
 		if [ -d $(BACKUP_DIR) ]; then \
 			echo "エラー: バックアップディレクトリ $(BACKUP_DIR) が既に存在します。"; \
