@@ -8,7 +8,7 @@ export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jbr/Contents/Home
 export PATH=$PATH:$JAVA_HOME
 
 export VOLTA_HOME=$HOME/.volta
-export PATH=$VOLTA_HOME:$PATH
+export PATH=$VOLTA_HOME/bin:$PATH
 
 export PATH=$PATH:$HOME/bin
 export PATH=/usr/local/bin:$PATH
