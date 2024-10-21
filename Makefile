@@ -5,10 +5,11 @@ all: install
 
 .PHONY: setup_brew
 setup_brew:
+	source ~/.zshrc
 	@installer/setup_brew.sh
 
-.PHONY: install
-install: setup_brew
+.PHONY: ln_sh
+ln_sh:
 	@if [ -z "$(NO_BACKUP)" ]; then \
 		if [ -d $(BACKUP_DIR) ]; then \
 			echo "エラー: バックアップディレクトリ $(BACKUP_DIR) が既に存在します。"; \
@@ -28,6 +29,10 @@ install: setup_brew
 	@echo "シンボリックリンクを作成しました: ~/.zshrc -> $(CURDIR)/.zshrc"
 	@ln -sf $(CURDIR)/.zsh ~/.zsh
 	@echo "シンボリックリンクを作成しました: ~/.zsh -> $(CURDIR)/.zsh"
+
+.PHONY: install
+install: ln_sh setup_brew
+	source ~/.zshrc
 
 .PHONY: clean
 clean:
