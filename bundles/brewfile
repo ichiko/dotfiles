@@ -1,3 +1,5 @@
 brew 'ghq'
 brew 'peco'
 brew 'rbenv'
+brew 'zsh-completions'
+brew 'zsh-autosuggestions'
