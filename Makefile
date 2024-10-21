@@ -30,8 +30,12 @@ ln_sh:
 	@ln -sf $(CURDIR)/.zsh ~/.zsh
 	@echo "シンボリックリンクを作成しました: ~/.zsh -> $(CURDIR)/.zsh"
 
+.PHONY: install_tools
+install_tools:
+	curl https://get.volta.sh | bash
+
 .PHONY: install
-install: ln_sh setup_brew
+install: ln_sh setup_brew install_tools
 	source ~/.zshrc
 
 .PHONY: clean
