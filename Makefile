@@ -1,4 +1,4 @@
-BACKUP_DIR := $(HOME)/dotfile_backup2
+BACKUP_DIR := $(HOME)/dotfile_backup
 
 .PHONY: all
 all: install
