@@ -1,6 +1,3 @@
-# 色の定義
-autoload -Uz colors && colors
-
 function prompt_command_result() {
   local prompt_color="${ICK_RESULT_COLOR:-$prompt_ick_default_result_color}"
   local prompt_color_error="${ICK_RESULT_COLOR_ERROR:-$prompt_ick_default_result_color_error}"
