@@ -1,0 +1,6 @@
+[user]
+	name = ichiko
+	email = 
+
+[includeIf "gitdir:~/ghq/github.com/works/**"]
+	path = ~/.gitconfig_works
