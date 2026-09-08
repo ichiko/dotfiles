@@ -12,7 +12,7 @@ if type brew &>/dev/null; then
     compinit
 fi
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 
 eval "$(rbenv init - zsh)"
 
