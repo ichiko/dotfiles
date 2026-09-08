@@ -35,7 +35,7 @@ install_tools:
 	curl https://get.volta.sh | bash
 
 .PHONY: install
-install: ln_sh setup_brew install_tools
+install: ln_sh
 	source ~/.zshrc
 
 .PHONY: clean

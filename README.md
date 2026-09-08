@@ -21,7 +21,14 @@ NO_BACKUP=1 make install
   - カレントディレクトリ名を表示
   - git のブランチ名を表示
   - プロンプトの色を設定
-- よく使うコマンドをインストール (not yet)
+
+### setup_brew
+
+homebrew をインストールする。
+
+### setup_tools (未完成)
+
+よく使うツールをインストールする。
 
 ## dependencies
 
